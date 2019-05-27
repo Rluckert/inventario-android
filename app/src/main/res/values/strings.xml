@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">inventario</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="btn_register">Registrarse</string>
+    <string name="goLogin">Ir al login</string>
+    <string name="Inventario_title">Login Inventario APP</string>
+    <string name="titleRegistro">Registro Inventario APP</string>
+    <string name="add_product">Agregar al inventario</string>
+</resources>
