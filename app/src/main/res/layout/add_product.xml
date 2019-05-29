@@ -73,8 +73,19 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary"
             android:onClick="saveProduct"
             android:text="Añadir al inventario" />
+
+        <Button
+            android:id="@+id/btn_go_to_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="goToViewProducts"
+            android:text="Ver productos"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

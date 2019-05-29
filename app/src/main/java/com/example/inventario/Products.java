@@ -1,5 +1,6 @@
 package com.example.inventario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,7 @@ public class Products extends AppCompatActivity {
     private EditText txtCode, txtName, txtDescription, txtSede, txtCantidad, txtValue;
     private FirebaseDatabase mydb = FirebaseDatabase.getInstance();
     private DatabaseReference ref = mydb.getReference("products");
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,5 +40,10 @@ public class Products extends AppCompatActivity {
         Integer cantidad = Integer.parseInt(txtCantidad.getText().toString());
         Double valor = Double.parseDouble(txtValue.getText().toString());
         ref.child(name).setValue(new Product(code, name, description, sede, valor, cantidad));
+    }
+
+    public void goToViewProducts(View view) {
+        intent = new Intent(Products.this,  List_Products.class);
+        startActivity(intent);
     }
 }
